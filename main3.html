@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aleksandra Jabłońska | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Optional modern font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Your external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Sticky header -->
+  <header class="site-header">
+    <div class="nav">
+      <a class="logo" href="#top">Aleksandra  <span>Jabłońska</span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-bg"></div>
+
+    <div class="container hero-content">
+      <div>
+        <div class="pill">AI • DeFi Fraud Detection • GNNs • FastAPI • Solidity</div>
+        <h1>
+          Building <span>intelligent</span> systems that are secure, scalable, and explainable.
+        </h1>
+        <p class="sub">
+          MSc Artificial Intelligence graduate with experience building end-to-end ML pipelines,
+          serving models via FastAPI, and logging fraud detections on-chain with smart contracts.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#projects">Explore Projects</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+          <a class="btn ghost" href="cv_Aleksandra_MSc_AI.pdf" download>Download CV</a>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <div class="profile-top">
+          <img src="./profile_pic.jpeg" alt="Profile Picture" class="profile-pic" />
+          <div class="profile-meta">
+            <h3>Aleksandra Jabłońska</h3>
+            <p>MSc Artificial Intelligence • Portfolio</p>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>5M+</strong><span>rows processed</span></div>
+          <div class="stat"><strong>GAT/GCN</strong><span>graph models</span></div>
+          <div class="stat"><strong>FastAPI</strong><span>model serving</span></div>
+          <div class="stat"><strong>Solidity</strong><span>on-chain logging</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- About -->
+    <section class="section container reveal" id="about">
+      <h2>About</h2>
+      <p>
+        A highly motivated MSc Artificial Intelligence graduate with a deep passion for AI and Machine Learning
+        and previous professional experience, looking for a graduate position. Constantly growing and learning,
+        with strong communication, teamwork, analytical skills, and problem-solving ability.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="section container reveal" id="skills">
+      <h2>Skills</h2>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">FastAPI</span>
+        <span class="badge">PyTorch</span>
+        <span class="badge">PyTorch Geometric</span>
+        <span class="badge">Scikit-learn</span>
+        <span class="badge">XGBoost</span>
+        <span class="badge">SHAP</span>
+        <span class="badge">Solidity</span>
+        <span class="badge">Hardhat</span>
+        <span class="badge">web3.py</span>
+        <span class="badge">React</span>
+        <span class="badge">SQL</span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section container reveal" id="projects">
+      <h2>Recent Projects</h2>
+
+      <div class="grid">
+        <article class="card">
+          <div class="tags">
+            <span class="tag">DeFi</span>
+            <span class="tag">GNN</span>
+            <span class="tag">FastAPI</span>
+          </div>
+          <h3>Blockchain + AI Fraud Detection (End-to-End)</h3>
+          <p>
+            Multi-model fraud detection pipeline using traditional ML + GNNs + a custom Transformer,
+            served via FastAPI, with blockchain logging via a Solidity FraudFlagger contract.
+          </p>
+          <a class="link" href="#report">View Report ↓</a>
+        </article>
+
+
+        <article class="card">
+          <div class="tags">
+            <span class="tag">Smart Contract</span>
+            <span class="tag">Hardhat</span>
+            <span class="tag">Web3</span>
+          </div>
+          <h3>On-chain Fraud Logging + Dashboard</h3>
+          <p>
+            Deployed contract with Hardhat. FastAPI triggers flagFraud() and a React + MetaMask UI
+            reads events and displays a live fraud log table.
+          </p>
+          <a class="link" href="#projects">Add your demo link →</a>
+        </article>
+
+
+        <article class="card">
+          <div class="tags">
+            <span class="tag">a</span>
+            <span class="tag">b</span>
+            <span class="tag">c</span>
+          </div>
+          <h3>Computer Vision: Melanoma classification System
+          </h3>
+          <p>
+            This project presents a MATLAB-based system that employs conventional computer vision
+techniques, to distinguish malignant melanomas from benign skin lesion. 
+          </p>
+          <a class="link" href="#report_comp_vison">View Report ↓</a>
+        </article>
+
+
+        <article class="card">
+          <div class="tags">
+            <span class="tag">Computer Vision</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Robotics</span>
+          </div>
+          <h3>Robot Vision with Red Object Detection</h3>
+          <p>
+            Robot detects red objects and reacts by turning around and moving away using Python + OpenCV.
+          </p>
+          <a class="link" href="https://github.com/yourusername/red-object-robot" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+      </div>
+
+      <!-- Report iframe -->
+      <div id="report" class="reveal report-block">
+        <h3> Project Report: Blockchain + AI Fraud Detection (End-to-End)</h3>
+        <span class="portfolio-note">
+         MSc Artificial Intelligence Final Project
+        </span>
+        <p class="project-desc">
+            The  
+        </p>
+        <iframe class="frame" src="AI_Blockchain_DeFi_Report_final.pdf" title="Project Report PDF"></iframe>
+        <p class="tiny">
+          If your browser blocks the preview, you can
+          <a class="link" href="AI_Blockchain_DeFi_Report_final.pdf">download the PDF</a>.
+        </p>
+      </div>
+
+    <!-- Computer Vision Project section -->
+      <div id="report_comp_vison" class="reveal report-block">
+        <h3> Computer Vision: Melanoma classification System</h3>
+        <span class="portfolio-note">
+         This project presents a MATLAB-based system that employs conventional computer vision
+techniques, to distinguish malignant melanomas from benign skin lesion. 
+        </span>
+        <p class="project-desc">
+            The  
+        </p>
+        <iframe class="frame" src="CW_Computer_Vision_Report.pdf" title="Project Report PDF"></iframe>
+        <p class="tiny">
+          If your browser blocks the preview, you can
+          <a class="link" href="CW_Computer_Vision_Report.pdf">download the PDF</a>.
+        </p>
+      </div>
+
+
+      <!-- Xcode section -->
+      <div class="reveal xcode-block">
+        <h3> SwiftUI Prototype (Figma & Xcode)</h3>
+        
+        <span class="portfolio-note">
+        This project was conducted throughout my BSc (Hons) Information Technology Management for Business (ITMB) degree. (Computer Science with Business) 
+        </span>
+
+        <div class="grid two">
+          <div class="card">
+            <h3 class="card-title"> Mobile Application for Athletes </h3>
+            <p>A mobile application solution: A social Platform Application for Athletes. </p>
+
+            <p class="project-desc">
+            The mobile application solution aims to develop a comprehensive prototype of a mobile app
+tailored to professional athletes and runners, enabling them to optimise their training, improve
+performance, and enhance their network within the running community. Project is aligned with
+our client's precise requirements, with the primary objective of enhancing time and goal
+management, as well as overall efficiency. Tailored to meet our client's unique needs, app offers
+multifaceted features that span across training, nutrition, and athlete communication. The report
+covers the application design, management technique used throughout the development process,
+project’s structure, the implementation as well as the challenges and issues experienced while
+working on the project. 
+            </p>
+
+            <div class="media-frame">
+            <img src="xcode1.png" alt="Xcode screenshot" class="img-frame" />
+            </div>
+
+
+            </div> 
+            
+            <div class="card">
+                <div id="report" class="reveal report-block">
+                <h3>Project Report</h3>
+
+                <iframe
+                    class="frame"
+                    src="Report_mobile_application_atheletas.pdf"
+                    title="Project Report PDF">
+                </iframe>
+
+                <p class="tiny">
+                    If your browser blocks the preview, you can
+                    <a class="link" href="Report_mobile_application_atheletas.pdf">
+                    download the PDF
+                    </a>.
+                </p>
+                </div>
+            </div>
+          </div>
+
+   
+
+    </section>
+
+    <!-- Resume -->
+    <section class="section container reveal" id="resume">
+      <h2>Resume</h2>
+      <p>
+        <a class="link" href="CV_MSc_AI_Aleksandra_Jablonska.pdf" download>Download my resume (PDF)</a>
+      </p>
+      <iframe class="frame" src="CV_MSc_AI_Aleksandra_Jablonska.pdf" title="CV PDF"></iframe>
+    </section>
+
+    <!-- Contact -->
+    <section class="section container reveal" id="contact">
+      <h2>Contact</h2>
+      <p>Want to collaborate or discuss an opportunity?</p>
+
+      <form action="mailto:you@example.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+
+      <p class="tiny">
+        Tip: Replace <strong>you@example.com</strong> with your real email address.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Aleksandra Jabłońska</div>
+  </footer>
+
+  <script>
+    // footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // mobile menu
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    // active nav link on scroll
+    const sections = [...document.querySelectorAll("section[id]")];
+    const navAnchors = [...document.querySelectorAll(".nav-links a")];
+
+    const setActiveLink = () => {
+      const scrollPos = window.scrollY + 110;
+      let current = "top";
+      for (const s of sections) {
+        if (s.offsetTop <= scrollPos) current = s.id;
+      }
+      navAnchors.forEach(a => {
+        const href = a.getAttribute("href").replace("#","");
+        a.classList.toggle("active", href === current);
+      });
+    };
+
+    // reveal on scroll
+    const revealEls = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    }, { threshold: 0.15 });
+
+    revealEls.forEach(el => io.observe(el));
+
+    window.addEventListener("scroll", setActiveLink);
+    setActiveLink();
+  </script>
+
+</body>
+</html>
