@@ -14,6 +14,70 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+
+<script>
+  (function() {
+    emailjs.init("7DnBZ_lrOS7chCzvg");
+  })();
+
+  function sendEmail() {
+
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const messageInput = document.getElementById("message");
+    const status = document.getElementById("status");
+    const button = document.querySelector("#contact button");
+
+    const params = {
+      name: nameInput.value,
+      email: emailInput.value,
+      message: messageInput.value
+    };
+
+    // Change button while sending
+    button.disabled = true;
+    button.innerText = "Sending...";
+
+    emailjs.send("service_e1uwlbt", "template_5rsb7bv", params)
+      .then(function() {
+
+        // Clear inputs
+        nameInput.value = "";
+        emailInput.value = "";
+        messageInput.value = "";
+
+        // Show success
+        status.innerHTML = "Thank you for reaching out. I’ll respond as soon as possible.";
+        status.className = "success";
+
+        // Reset button
+        button.disabled = false;
+        button.innerText = "Send Message";
+
+        // Hide message after 4 seconds
+        setTimeout(() => {
+          status.innerHTML = "";
+        }, 4000);
+
+      }, function(error) {
+
+        status.innerHTML = "Something went wrong. Please try again.";
+        status.className = "error";
+
+        button.disabled = false;
+        button.innerText = "Send Message";
+      });
+  }
+</script>
+
+
+
+
+
 <body>
 
   <!-- Sticky header -->
@@ -39,13 +103,13 @@
 
     <div class="container hero-content">
       <div>
-        <div class="pill">AI • DeFi Fraud Detection • GNNs • FastAPI • Solidity</div>
+        <div class="pill">AI • DeFi Fraud Detection • Python • GNNs • FastAPI • Solidity</div>
         <h1>
-          Building <span>intelligent</span> systems that are secure, scalable, and explainable.
+          Building <span>intelligent</span> systems that are secure and scalable.
         </h1>
         <p class="sub">
           MSc Artificial Intelligence graduate with experience building end-to-end ML pipelines,
-          serving models via FastAPI, and logging fraud detections on-chain with smart contracts.
+          serving models via FastAPI, and logging fraud detections on-chain with Blockchain and smart contracts.
         </p>
 
         <div class="cta">
@@ -64,10 +128,10 @@
           </div>
         </div>
         <div class="stats">
-          <div class="stat"><strong>5M+</strong><span>rows processed</span></div>
+          <div class="stat"><strong>Previous Work Experience</strong><span>International settings </span></div>
           <div class="stat"><strong>GAT/GCN</strong><span>graph models</span></div>
-          <div class="stat"><strong>FastAPI</strong><span>model serving</span></div>
-          <div class="stat"><strong>Solidity</strong><span>on-chain logging</span></div>
+          <div class="stat"><strong>FastAPI</strong><span>Understanding Backend Development</span></div>
+          <div class="stat"><strong>Blockchain & Solidity</strong><span> on-chain logging</span></div>
         </div>
       </aside>
     </div>
@@ -76,14 +140,30 @@
   <main>
 
     <!-- About -->
-    <section class="section container reveal" id="about">
-      <h2>About</h2>
-      <p>
-        A highly motivated MSc Artificial Intelligence graduate with a deep passion for AI and Machine Learning
-        and previous professional experience, looking for a graduate position. Constantly growing and learning,
-        with strong communication, teamwork, analytical skills, and problem-solving ability.
-      </p>
+    <section class="about container reveal" id="about">
+    <div class="about-wrapper">
+
+        <div class="about-image">
+        <img src="profile_pic6.jpeg" alt="Aleksandra Jablonska">
+        </div>
+
+        <div class="about-text">
+        <h2>About Me</h2>
+        <p>MSc Artificial Intelligence • BSc (Hons) ITMB Computer Science with Business  </p>
+
+        <p>
+            A highly motivated and hard-working MSc Artificial Intelligence recent graduate with a deep passion for AI and Machine Learning and previous professional experience, looking for a graduate position. 
+            Constantly growing and learning, always striving to achieve the best results and producing high-quality work. Driven by curiosity, quick to adapt to new settings, with strong communication, teamwork, and analytical skills. Speaking a few languages, with excellent time management and problem-solving abilities. 
+            Seeking a challenging role to further develop my technical and professional skills while contributing to the growth and success of a dynamic organisation.
+        </p>
+        </div>
+
+
+
+    </div>
     </section>
+
+
 
     <!-- Skills -->
     <section class="section container reveal" id="skills">
@@ -105,7 +185,7 @@
     </section>
 
     <!-- Projects -->
-    <section class="section container reveal" id="projects">
+    <section class="section container " id="projects">
       <h2>Recent Projects</h2>
 
       <div class="grid">
@@ -141,9 +221,10 @@
 
         <article class="card">
           <div class="tags">
-            <span class="tag">a</span>
-            <span class="tag">b</span>
-            <span class="tag">c</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">Segmentation </span>
+            <span class="tag">Classification</span>
+            <span class="tag">Feature Extraction</span>
           </div>
           <h3>Computer Vision: Melanoma classification System
           </h3>
@@ -157,17 +238,44 @@ techniques, to distinguish malignant melanomas from benign skin lesion.
 
         <article class="card">
           <div class="tags">
-            <span class="tag">Computer Vision</span>
-            <span class="tag">OpenCV</span>
-            <span class="tag">Robotics</span>
+            <span class="tag">ML full pipeline</span>
+            <span class="tag">Visualisation </span>
+            <span class="tag"> Different ML strategies comparison </span>
           </div>
-          <h3>Robot Vision with Red Object Detection</h3>
+          <h3>Machine Learning: Heart Disease Prediction
+          </h3>
           <p>
-            Robot detects red objects and reacts by turning around and moving away using Python + OpenCV.
+            The project develops predictive models to assess cardiovascular disease risk using clinical health data.
+        It includes data cleaning, exploratory analysis, feature engineering, and evaluation of machine learning models.
+               
           </p>
+          <a class="link" href="#ml">View Jupyter Notebook pdf file ↓</a>
+        </article>
+
+
+
+
+
+        <article class="card">
+          <div class="tags">
+            <span class="tag">Camera usage & ROI </span>
+            <span class="tag">Reactive & Following Behaviour</span>
+            <span class="tag">Emotions & Human Detection</span>
+            <span class="tag">QR code & Colours Detection</span>
+          </div>
+          <h3>Robotics and Intelligent Systems</h3>
+            <p class="project-desc">
+            This project developed an autonomous mobile robot control system using Python, combining reactive behaviours and high-level navigation strategies. Braitenberg-inspired behaviours were implemented to demonstrate sensor-driven responses.
+
+            A person-following behaviour enabled the robot to track and follow a human while maintaining a safe distance and avoiding obstacles. The system used an Intel RealSense depth camera and NVIDIA Jetson Nano for showcasing intelligent navigation and safe human-robot interaction.
+            </p>
           <a class="link" href="https://github.com/yourusername/red-object-robot" target="_blank" rel="noopener">GitHub →</a>
+            <a class="link" href="#robotics_report">View Report ↓</a>
         </article>
       </div>
+
+
+
 
       <!-- Report iframe -->
       <div id="report" class="reveal report-block">
@@ -175,8 +283,39 @@ techniques, to distinguish malignant melanomas from benign skin lesion.
         <span class="portfolio-note">
          MSc Artificial Intelligence Final Project
         </span>
-        <p class="project-desc">
-            The  
+        <p >
+            Financial fraud remains a persistent global threat, especially in decentralised finance
+(DeFi). Blockchain technology provides immutability and transparency, while artificial
+intelligence (AI) offers predictive capabilities to identify anomalies in real time. This thesis
+combines these two technologies to develop a full-stack fraud detection pipeline that
+couples high-recall AI models with blockchain-based fraud logging for secure, auditable
+monitoring.
+</p>
+<p>
+The project develops and evaluates multiple AI models, including ensemble learners
+(Random Forest, XGBoost, LightGBM, CatBoost), graph-based models (Graph
+Convolutional Networks, GraphSAGE, Graph Attention Networks), and a custom
+Transformer architecture. Trained on chosen PaySim dataset, the models were recalloptimised to prioritise the detection of fraudulent transactions, using evaluation metrics
+such as Accuracy, Precision, Recall, F1, and AUC. Model were later enhanced through
+threshold adjustments, SHAP and fraud-score visualisations.
+</p>
+<p>
+A FastAPI was deployed for backend ensuring training inference parity via feature scaling,
+class imbalance handling. Fraud predictions were logged both locally in SQLite for initial
+testing and ultimately on-chain via a Solidity smart contract deployed with Hardhat and
+integrated using web3.py. A React with MetaMask frontend enabled secure wallet
+interaction and real-time visualisation of fraud logs and model outputs.
+</p>
+<p>
+Robustness was tested using two complementary approaches: rule-based intrusion
+injections and chosen generative adversarial models, which produced realistic synthetic
+fraud patterns for adversarial evaluation. These methods highlighted detection gaps and
+informed threshold adjustments for future improvements. The thesis also investigates
+various issues such as system bottlenecks, including synchronous blockchain calls,
+stability run issues in full-dataset with over 6 million inputs, highlighting the importance
+of consistent scaling and validation. A few solutions were proposed. Each section will be
+explained in details later in this report
+
         </p>
         <iframe class="frame" src="AI_Blockchain_DeFi_Report_final.pdf" title="Project Report PDF"></iframe>
         <p class="tiny">
@@ -185,37 +324,115 @@ techniques, to distinguish malignant melanomas from benign skin lesion.
         </p>
       </div>
 
+
+
+
+    
+
     <!-- Computer Vision Project section -->
       <div id="report_comp_vison" class="reveal report-block">
         <h3> Computer Vision: Melanoma classification System</h3>
-        <span class="portfolio-note">
-         This project presents a MATLAB-based system that employs conventional computer vision
-techniques, to distinguish malignant melanomas from benign skin lesion. 
-        </span>
-        <p class="project-desc">
-            The  
-        </p>
-        <iframe class="frame" src="CW_Computer_Vision_Report.pdf" title="Project Report PDF"></iframe>
-        <p class="tiny">
-          If your browser blocks the preview, you can
-          <a class="link" href="CW_Computer_Vision_Report.pdf">download the PDF</a>.
+        <div class="grid two">
+            <div class="card">
+
+                <h3 class="card-title">Project Overview</h3>
+                <p class="portfolio-desc">
+        MATLAB • Segmentation • Feature Extraction • Classification
+                </p>
+
+                <p class="project-desc">
+        This project presents a MATLAB-based system that employs conventional computer vision
+        techniques to distinguish malignant melanomas from benign skin lesions.
+                </p>
+
+                <p class="project-desc">
+        The workflow includes image preprocessing, lesion segmentation, feature extraction
+        (shape, color, and texture descriptors), and rule-based / classical classification to support
+        automated screening.
+                </p>
+
+                <p class="project-desc">
+        The project evaluates the effectiveness of the extracted features and reports results using
+        appropriate performance measures (e.g., accuracy, sensitivity, specificity) alongside visual
+        examples of intermediate processing steps.
+                </p>
+
+  </div>
+
+        <div class="card">
+            
+            <iframe class="frame" src="CW_Computer_Vision_Report.pdf" title="Project Report PDF"></iframe>
+            <p class="tiny">
+            If your browser blocks the preview, you can
+            <a class="link" href="CW_Computer_Vision_Report.pdf">download the PDF</a>.
         </p>
       </div>
+        
+    </div>
+
+   
+
+
+
+  <!-- ML Project section -->
+      <div id="ml" class="reveal report-block">
+        <h3> Machine Learning: Heart Disease Prediction</h3>
+
+        <div class="grid two">
+            <div class="card">
+               
+                <p class="project-desc">
+This project focuses on developing predictive machine learning models to assess the risk of cardiovascular disease using clinical health data. Cardiovascular disease remains one of the leading causes of mortality worldwide, making early detection and risk prediction essential for preventive healthcare and medical decision support.
+
+</p>
+
+
+<p class="project-desc">
+The project implements a complete machine learning pipeline. It begins with data cleaning and preprocessing, where missing values, inconsistencies, and potential outliers are handled to ensure data quality.
+</p>
+
+<p class="project-desc">
+Exploratory data analysis and visualization techniques are applied to understand data distributions, relationships between features, and patterns associated with cardiovascular risk.
+</p>
+
+<p class="project-desc">
+Multiple machine learning models are developed and evaluated using metrics such as accuracy, precision, recall, F1-score, and ROC-AUC.
+</p>
+
+<p class="project-desc">
+This work demonstrates how machine learning can support healthcare decision-making by providing data-driven risk assessment tools for early cardiovascular disease detection.
+</p>
+ </div>
+            
+            <div class="card">
+                
+                <iframe class="frame" src="CWHeartDiseaseML.pdf" title="Project Report PDF"></iframe>
+
+                <p class="tiny">
+                If your browser blocks the preview, you can
+                    <a class="link" href="CWHeartDiseaseML.pdf">download the PDF</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
 
 
       <!-- Xcode section -->
-      <div class="reveal xcode-block">
-        <h3> SwiftUI Prototype (Figma & Xcode)</h3>
-        
-        <span class="portfolio-note">
-        This project was conducted throughout my BSc (Hons) Information Technology Management for Business (ITMB) degree. (Computer Science with Business) 
-        </span>
+      <div id="report_xcode" class="reveal xcode-block">
+        <h3> SwiftUI Mobile App Prototype (Figma & Xcode)</h3>
 
         <div class="grid two">
           <div class="card">
-            <h3 class="card-title"> Mobile Application for Athletes </h3>
-            <p>A mobile application solution: A social Platform Application for Athletes. </p>
-
+            <h3 class="card-title"> A Mobile Application: A social Platform Application for Athletes. </h3>
+       
             <p class="project-desc">
             The mobile application solution aims to develop a comprehensive prototype of a mobile app
 tailored to professional athletes and runners, enabling them to optimise their training, improve
@@ -236,9 +453,7 @@ working on the project.
             </div> 
             
             <div class="card">
-                <div id="report" class="reveal report-block">
-                <h3>Project Report</h3>
-
+                
                 <iframe
                     class="frame"
                     src="Report_mobile_application_atheletas.pdf"
@@ -253,9 +468,59 @@ working on the project.
                 </p>
                 </div>
             </div>
-          </div>
 
-   
+          </div>
+        </div>
+
+<!-- Robotics Project section -->
+<div id="robotics_report" class="reveal report-block">
+  <h3>Robotics and Intelligent Systems</h3>
+
+  <div class="grid two">
+    <div class="card">
+      
+
+      <p class="project-desc">
+         This report explores the integrated behavioural and following behaviour mechanisms of a
+robot, focusing on how these were designed, implemented, and analysed within the scope
+of this project. The primary aim is to provide a comprehensive explanation of the robot’s
+actions and responses, such as aggression, fear, love, and curiosity, alongside its ability to
+follow a chosen person. In order to achieve that, both object as well as colour detection
+will be implemented.
+      </p>
+
+      <p class="project-desc">
+To establish a structured approach, the first chapter begins by detailing the project’s overall
+organisation, including the methodology employed, project management tools utilised, and
+the work breakdown structure (WBS) that guided our team throughout the development
+process.
+The next chapters describe the project’s technical aspects. They outline how particular
+behaviours were designed, evaluated, and tested. Comprehensive explanations of the programming code, flowcharts, and class designs are provided to illustrate the mechanisms
+enabling the robot’s behaviour. By providing both organisational and technical perspectives, this report offers a complete, well-rounded overview of the project, from start to
+completion. Project was completed as part of an MSc Artificial Intelligence module at university, delivered as a team project.
+      </p>
+
+
+    </div>
+
+    <div class="card">
+
+      <iframe class="frame"
+              src="Robotics_Report.pdf"
+              title="Robotics Project Report PDF"></iframe>
+
+      <p class="tiny">
+        If your browser blocks the preview, you can
+        <a class="link" href="Robotics_Report.pdf">download the PDF</a>.
+      </p>
+    </div>
+  </div>
+</div>
+            
+
+
+
+
 
     </section>
 
@@ -269,27 +534,36 @@ working on the project.
     </section>
 
     <!-- Contact -->
+
+
     <section class="section container reveal" id="contact">
-      <h2>Contact</h2>
-      <p>Want to collaborate or discuss an opportunity?</p>
+    <h2>Contact</h2>
+    <p>Want to collaborate or discuss an opportunity?</p>
 
-      <form action="mailto:you@example.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="email" name="email" placeholder="Your email" required />
-        <textarea name="message" placeholder="Your message" required></textarea>
-        <button class="btn primary" type="submit">Send Message</button>
-      </form>
+    <input type="text" id="name" placeholder="Your name" required>
+    <input type="email" id="email" placeholder="Your email" required>
+    <textarea id="message" placeholder="Your message" required></textarea>
 
-      <p class="tiny">
-        Tip: Replace <strong>you@example.com</strong> with your real email address.
-      </p>
+    <button class="btn primary" onclick="sendEmail()">Send Message</button>
+
+    <p id="status"></p>
     </section>
 
   </main>
 
+
+
+
+
+
   <footer class="footer">
-    <div class="container">© <span id="year"></span> Aleksandra Jabłońska</div>
-  </footer>
+  <div class="container footer-content">
+    <span class="footer-item">© <span id="year"></span> Aleksandra Jabłońska</span>
+    <span class="footer-item">🇬🇧 +44 7444 274 597  </span>
+    <span class="footer-item">🇵🇱 +48 784 715 935 </span>
+    <span class="footer-item">✉️ aleksandra.jablonska15@gmail.com</span>
+  </div>
+</footer>
 
   <script>
     // footer year
