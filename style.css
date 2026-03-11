@@ -325,6 +325,24 @@ body{
   border-radius: 14px;
 }
 
+.cv-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.frameCV{
+  
+  height: 800px;
+  width: 800px;
+  max-width: 95%;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
+  margin-top: 12px auto;
+  display: block;
+}
 
 
 
@@ -347,9 +365,12 @@ body{
   border: 1px solid rgba(255,255,255,0.10);
   background: rgba(255,255,255,0.04);
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  max-height: 230px;
 
   /* keeps the media area consistent across both cards */
   aspect-ratio: 16 / 9;
+  max-width: 450px; 
+  max-height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -418,7 +439,7 @@ textarea{ resize: vertical; min-height: 120px; }
 }
 
 .report-block{
-  margin-top: 26px;
+  margin-top: 90px;
 }
 
 
@@ -518,4 +539,30 @@ textarea{ resize: vertical; min-height: 120px; }
 
 #contact button {
   margin-top: 20px;  
+}
+
+
+
+.contact-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:80px;
+}
+
+.contact-form{
+    flex:2;
+}
+
+.about-image{
+    flex:1;
+    display:flex;
+    justify-content:flex-end;
+    margin-top:90px;
+}
+
+.about-image img{
+    width:350px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
