@@ -150,7 +150,7 @@ body{
 }
 .hero h1{
   margin: 16px 0 10px;
-  font-size: clamp(34px, 4.2vw, 64px);
+  font-size: clamp(30px, 3.8vw, 56px);
   line-height: 1.05;
   letter-spacing: -0.03em;
 }
@@ -389,6 +389,7 @@ body{
 }
 
 
+
 /* contact form */
 form{
   display:grid;
@@ -565,4 +566,33 @@ textarea{ resize: vertical; min-height: 120px; }
     width:350px;
     border-radius:20px;
     box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+
+.project-blockchain,
+.project-list {
+  font-size: 15px;                 /* same size */
+  line-height: 1.6;                /* same spacing */
+  color: rgba(255,255,255,0.75);   /* same colour */
+  font-weight: 400;
+  max-width: 100%;                /* same reading width */
+}
+
+.project-blockchain{
+  margin-top: 14px;
+}
+
+.project-list{
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.project-list li{
+  margin-bottom: 6px;
+}
+
+/* ensure bullet markers use the same colour */
+.project-list li::marker{
+  color: rgba(255,255,255,0.75);
 }

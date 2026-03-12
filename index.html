@@ -325,32 +325,55 @@ techniques, to distinguish malignant melanomas from benign skin lesion.
           </div>
 
            
-        <p >
-            Financial fraud remains a persistent global threat, especially in decentralised finance
-(DeFi). Blockchain technology provides immutability and transparency, while artificial
-intelligence (AI) offers predictive capabilities to identify anomalies in real time. This thesis
-combines these two technologies to develop a full-stack fraud detection pipeline that
-couples high-recall AI models with blockchain-based fraud logging for secure, auditable
-monitoring. The project develops and evaluates multiple AI models, including ensemble learners
-(Random Forest, XGBoost, LightGBM, CatBoost), graph-based models (Graph
-Convolutional Networks, GraphSAGE, Graph Attention Networks), and a custom
-Transformer architecture. Trained on chosen PaySim dataset, the models were recalloptimised to prioritise the detection of fraudulent transactions, using evaluation metrics
-such as Accuracy, Precision, Recall, F1, and AUC. Model were later enhanced through
-threshold adjustments, SHAP and fraud-score visualisations.
+        
+<p class="project-blockchain">
+Financial fraud continues to be a major global challenge, particularly in decentralised
+finance (DeFi). This project explores how combining <strong>blockchain technology</strong> with
+<strong>artificial intelligence (AI)</strong> can improve fraud detection and provide secure,
+transparent logging of suspicious transactions. The system integrates multiple technologies
+and models to build a complete fraud detection pipeline:
 </p>
-<p>
-A FastAPI was deployed for backend ensuring training inference parity via feature scaling,
-class imbalance handling. Fraud predictions were logged both locally in SQLite for initial
-testing and ultimately on-chain via a Solidity smart contract deployed with Hardhat and
-integrated using web3.py. A React with MetaMask frontend enabled secure wallet
-interaction and real-time visualisation of fraud logs and model outputs. Robustness was tested using two complementary approaches: rule-based intrusion
-injections and chosen generative adversarial models, which produced realistic synthetic
-fraud patterns for adversarial evaluation. These methods highlighted detection gaps and
-informed threshold adjustments for future improvements. The thesis also investigates
-various issues such as system bottlenecks, including synchronous blockchain calls,
-stability run issues in full-dataset with over 6 million inputs, highlighting the importance
-of consistent scaling and validation. A few solutions were proposed. Each section will be
-explained in details later in this report
+
+<ul class="project-list">
+  <li>Uses blockchain for <strong>transparent and immutable fraud logging</strong>.</li>
+  <li>Applies AI models to <strong>detect suspicious financial transactions in real time</strong>.</li>
+  <li>Evaluates several machine learning approaches, including:
+    <ul>
+      <li>Ensemble models: Random Forest, XGBoost, LightGBM, CatBoost</li>
+      <li>Graph-based models: GCN, GraphSAGE, and Graph Attention Networks (GAT)</li>
+      <li>A custom Transformer architecture for advanced pattern detection</li>
+    </ul>
+  </li>
+  <li>Models were trained on the <strong>PaySim dataset</strong> and optimized to prioritise fraud detection.</li>
+  <li>Performance was evaluated using Accuracy, Precision, Recall, F1 Score, and AUC.</li>
+  <li>Model behaviour and predictions were analysed using <strong>threshold tuning, SHAP explanations, and fraud-score visualisations</strong>.</li>
+</ul>
+
+<p class="project-blockchain">
+To support real-world deployment, the project also includes a full-stack implementation
+that connects AI models with blockchain infrastructure.
+</p>
+
+<ul class="project-list">
+  <li>A <strong>FastAPI backend</strong> ensures consistent model training and prediction pipelines.</li>
+  <li>Fraud predictions are stored initially locally in <strong>SQLite</strong> for testing and then logged on-chain through a <strong>Solidity smart contract</strong>.</li>
+  <li>Smart contracts are deployed using <strong>Hardhat</strong> and connected through <strong>web3.py</strong>.</li>
+  <li>A <strong>React interface with MetaMask</strong> allows secure wallet interaction and visualisation of fraud detection results.</li>
+  <li>System robustness was tested using:
+    <ul>
+      <li>Rule-based fraud or intrusion simulations</li>
+      <li>Generative adversarial techniques to create synthetic fraud patterns</li>
+    </ul>
+  </li>
+</ul>
+
+<p class="project-blockchain">
+Additional experiments analysed system performance challenges, including blockchain
+latency and large-scale dataset processing. Proposed improvements and further details
+are discussed in the detailed report provided below.
+</p>
+
+
 
         </p>
         <iframe class="frame" src="AI_Blockchain_DeFi_Report_final.pdf" title="Project Report PDF"></iframe>
@@ -381,15 +404,32 @@ explained in details later in this report
 
           
 
-                <p class="project-desc">
+         <p class="project-desc">
+Malignant melanoma is the most dangerous form of skin cancer, and early detection is essential for effective treatment. This project explores how machine learning and computer vision techniques can assist clinicians by improving the speed and consistency of skin lesion diagnosis.
+</p>
 
-        Malignant melanoma is the most dangerous form of skin cancer, and early detection is essential for effective treatment. However, manual diagnosis from skin lesion images can be challenging due to the visual similarity between malignant and benign lesions. Machine learning techniques can assist clinicians by providing faster and more consistent diagnostic support.  </p>
-          <p class="project-desc">
-        This project develops a MATLAB-based system to classify skin lesion images as malignant melanoma or benign using computer vision techniques and a Support Vector Machine (SVM) classifier. The workflow includes image preprocessing, lesion segmentation, and feature extraction. Shape, color, and texture features are extracted from the segmented lesions and used as input for the SVM model.       </p>
-
-                <p class="project-desc">
-       The system’s performance is evaluated using standard metrics such as accuracy, sensitivity, and specificity, along with visual examples of intermediate processing steps. The project demonstrates how classical image processing and machine learning methods can support automated skin cancer screening and assist in early diagnosis.
-                </p>
+<ul class="project-desc">
+  <li>Develops a <strong>MATLAB-based system</strong> to classify skin lesion images as malignant melanoma or benign.</li>
+  <li>Uses <strong>computer vision techniques</strong> combined with a <strong>Support Vector Machine (SVM)</strong> classifier.</li>
+  <li>The workflow includes several processing stages:
+    <ul>
+      <li>Image preprocessing</li>
+      <li>Lesion segmentation</li>
+      <li>Feature extraction</li>
+    </ul>
+  </li>
+  <li>Extracts <strong>shape, colour, and texture features</strong> from segmented lesions.</li>
+  <li>Uses the extracted features as input for the <strong>SVM classification model</strong>.</li>
+  <li>Evaluates system performance using:
+    <ul>
+      <li>Accuracy</li>
+      <li>Sensitivity</li>
+      <li>Specificity</li>
+    </ul>
+  </li>
+  <li>Provides <strong>visual examples of intermediate processing steps</strong> to demonstrate how the system analyses images.</li>
+  <li>Shows how classical <strong>image processing and machine learning</strong> techniques can support automated skin cancer screening and assist early diagnosis.</li>
+</ul>
 
 
               
@@ -422,22 +462,37 @@ explained in details later in this report
         <div class="grid two">
             <div class="card">
                
-                <p class="project-desc">
-This project focuses on developing predictive machine learning models to assess the risk of cardiovascular disease using clinical health data. Cardiovascular disease remains one of the leading causes of mortality worldwide, making early detection and risk prediction essential for preventive healthcare and medical decision support.
-
-</p>
-
-
 <p class="project-desc">
-The project implements a complete machine learning pipeline. It begins with data cleaning and preprocessing, where missing values, inconsistencies, and potential outliers are handled to ensure data quality. 
-Exploratory data analysis and visualization techniques are applied to understand data distributions, relationships between features, and patterns associated with cardiovascular risk.
-Multiple machine learning models are developed and evaluated using metrics such as accuracy, precision, recall, F1-score, and ROC-AUC.
+This project focuses on developing predictive machine learning models to assess the risk of cardiovascular disease using clinical health data. Cardiovascular disease remains one of the leading causes of mortality worldwide, making early detection and accurate risk prediction essential for preventive healthcare and clinical decision support.
 </p>
 
+<ul class="project-desc">
+  <li>Develops predictive <strong>machine learning models</strong> to estimate the likelihood of cardiovascular disease.</li>
+  <li>Uses <strong>clinical health datasets</strong> containing patient attributes and medical indicators.</li>
+  <li>Implements a complete <strong>machine learning pipeline</strong>, including:
+    <ul>
+      <li>Data cleaning and preprocessing</li>
+      <li>Handling missing values and inconsistencies</li>
+      <li>Detecting and managing potential outliers</li>
+    </ul>
+  </li>
+  <li>Applies <strong>exploratory data analysis (EDA)</strong> and visualization techniques to:
+    <ul>
+      <li>Understand data distributions</li>
+      <li>Identify relationships between clinical features</li>
+      <li>Detect patterns associated with cardiovascular risk</li>
+    </ul>
+  </li>
+  <li>Builds and evaluates multiple <strong>machine learning models</strong>.</li>
+  <li>Measures model performance using standard metrics:
+    <ul>
+      <li>Accuracy • Precision • Recall • F1-score • ROC-AUC </li>
 
-<p class="project-desc">
-This work demonstrates how machine learning can support healthcare decision-making by providing data-driven risk assessment tools for early cardiovascular disease detection.
-</p>
+    </ul>
+  </li>
+  <li>Demonstrates how <strong>machine learning can support healthcare decision-making</strong> by providing data-driven tools for early cardiovascular disease risk detection.</li>
+</ul>
+
  </div>
             
             <div class="card">
@@ -473,30 +528,46 @@ This work demonstrates how machine learning can support healthcare decision-maki
 
         <div class="grid two">
           <div class="card">
-        
-               <p class="project-desc">
-            The mobile application solution aimed to develop a comprehensive prototype of a mobile app
-tailored to professional athletes and runners, enabling them to optimise their training, improve
-performance, and enhance their network within the running community. Project is aligned with
-the client's precise requirements, with the primary objective of enhancing time and goal
-management, as well as overall efficiency. The report covers the application design, management technique used throughout the development process,
-project’s structure, the implementation as well as the challenges and issues experienced while
-working on the project. 
- </p>
-              <p class="project-desc">
-The project focused on developing the initial design of a mobile application using Figma, 
-which enabled the transformation of static design concepts into interactive prototypes. 
-In addition to the design stage, more advanced development features were explored using Xcode, 
-an integrated development environment (IDE) created by Apple for building applications across its platforms.  
-As Figma cannot fully replicate real application performance, advanced UI interactions, or responsiveness, , 
-further development and testing in Xcode were required to accurately evaluate the final application's performance and user experience.
-            </p>
 
-            <div class="media-frame">
-            <img src="xcode1.png" alt="Xcode screenshot" class="img-frame" />
-            </div>
+            <p class="project-desc">
+This project focuses on developing a mobile application prototype designed for professional athletes and runners. The goal is to help users optimise training routines, improve performance, and strengthen their connection with the running community while supporting efficient time and goal management.
+</p>
 
+<ul class="project-desc">
+  <li>Designs a <strong>mobile application prototype</strong> tailored to professional athletes and runners.</li>
+  <li>Aligns the project with <strong>client requirements</strong> to improve training efficiency and productivity.</li>
+  <li>The report documents several aspects of the development process, including:
+    <ul>
+      <li>Application design</li>
+      <li>Project structure</li>
+      <li>Management techniques used during development</li>
+      <li>Implementation stages</li>
+      <li>Challenges and issues encountered</li>
+    </ul>
+  </li>
+</ul>
 
+<p class="project-desc">
+The design and development process combines modern prototyping tools with application development environments.
+</p>
+
+<ul class="project-desc">
+  <li>Creates the initial application design using <strong>Figma</strong> to transform static concepts into interactive prototypes.</li>
+  <li>Explores additional development features using <strong>Xcode</strong>, Apple’s integrated development environment for building applications.</li>
+  <li>Uses Xcode to test advanced elements that Figma cannot fully simulate, including:
+    <ul>
+      <li>Real application performance</li>
+      <li>Advanced UI interactions</li>
+      <li>Responsive behaviour</li>
+    </ul>
+  </li>
+  <li>Ensures the final design can be evaluated realistically in terms of <strong>performance, usability, and user experience</strong>.</li>
+</ul>
+
+<p class="project-desc">
+This project was completed as part of my <strong>Bachelor of Science BSc (Hons) ITMB – Information Technology Management for Business</strong> (Computer Science with Business). 
+</p>
+     
             </div> 
             
             <div class="card">
@@ -513,6 +584,10 @@ further development and testing in Xcode were required to accurately evaluate th
                     download the PDF
                     </a>.
                 </p>
+
+                         <div class="media-frame">
+            <img src="xcode1.png" alt="Xcode screenshot" class="img-frame" />
+            </div>
                 </div>
             </div>
 
@@ -534,25 +609,40 @@ further development and testing in Xcode were required to accurately evaluate th
     <div class="card">
       
 
-      <p class="project-desc">
-         This report explores the integrated behavioural and following behaviour mechanisms of a
-robot, focusing on how these were designed, implemented, and analysed within the scope
-of this project. The primary aim is to provide a comprehensive explanation of the robot’s
-actions and responses, such as aggression, fear, love, and curiosity, alongside its ability to
-follow a chosen person. In order to achieve that, both object as well as colour detection
-will be implemented.
-      </p>
+  <p class="project-desc">
+This project explores behavioural and person-following mechanisms implemented in a robot.
+The goal was to design, implement, and analyse how a robot can simulate human-like
+behavioural responses while interacting with its environment and following a selected person. This project was completed as part of an MSc Artificial Intelligence module at university and delivered as a team project.
+</p>
 
-      <p class="project-desc">
-To establish a structured approach, the first chapter begins by detailing the project’s overall
-organisation, including the methodology employed, project management tools utilised, and
-the work breakdown structure (WBS) that guided our team throughout the development
-process.
-The next chapters describe the project’s technical aspects. They outline how particular
-behaviours were designed, evaluated, and tested. Comprehensive explanations of the programming code, flowcharts, and class designs are provided to illustrate the mechanisms
-enabling the robot’s behaviour. By providing both organisational and technical perspectives, this report offers a complete, well-rounded overview of the project, from start to
-completion. Project was completed as part of an MSc Artificial Intelligence module at university, delivered as a team project.
-      </p>
+<ul class="project-desc">
+  <li>Implements multiple <strong>robot behavioural responses</strong>, including:
+    <ul>
+      <li>Aggression • Fear • Love • Curiosity</li>
+
+    </ul>
+  </li>
+  <li>Develops a <strong>person-following behaviour</strong> allowing the robot to track and follow a selected individual.</li>
+  <li>Uses <strong>object detection and colour detection</strong> to support environmental interaction and behavioural triggers.</li>
+</ul>
+
+<p class="project-desc">
+The project also follows a structured development process covering both organisational and
+technical aspects of the system.
+</p>
+
+<ul class="project-desc">
+  <li>Documents the <strong>overall project organisation</strong>, including methodology and development planning.</li>
+  <li>Uses <strong>project management tools</strong> and a <strong>Work Breakdown Structure (WBS)</strong> to coordinate the team’s work.</li>
+  <li>Explains how robot behaviours were <strong>designed, implemented, evaluated, and tested</strong>.</li>
+  <li>Provides technical documentation including:
+    <ul>
+      <li> Code structure • Flowcharts behaviour logic • Class design diagrams</li>
+
+    </ul>
+  </li>
+  <li>Demonstrates how the system integrates behavioural logic with computer vision techniques.</li>
+</ul>
 
 
     </div>
