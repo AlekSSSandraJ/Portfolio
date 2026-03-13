@@ -326,8 +326,9 @@ img, iframe, embed, object {
 }
 
 /* pdf/iframe */
-.frame{
+.frame {
   width: 100%;
+  max-width: 100%;
   height: 500px;
   border: 1px solid rgba(255,255,255,0.14);
   border-radius: 14px;
@@ -350,19 +351,42 @@ img, iframe, embed, object {
   margin-top: 12px;
 }
 
-.frameCV{
-  
+.frameCV {
+  width: 100%;
+  max-width: 100%;
   height: 800px;
-  width: 800px;
-  max-width: 95%;
   border: 1px solid rgba(255,255,255,0.14);
   border-radius: 14px;
   overflow: hidden;
   background: rgba(255,255,255,0.03);
-  margin-top: 12px auto;
   display: block;
+  margin-top: 12px;
 }
 
+@media (max-width: 768px) {
+  .frame {
+    height: 320px;
+  }
+
+  .frameCV {
+    height: 420px;
+  }
+
+  .media-frame {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    aspect-ratio: auto;
+    min-height: 220px;
+  }
+
+  .img-frame {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
 
 
 .grid.two{
@@ -377,23 +401,39 @@ img, iframe, embed, object {
   flex-direction: column;
   height: 100%;                 
 }
-.media-frame{
+.media-frame {
   margin-top: 12px;
   padding: 14px;
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.10);
   background: rgba(255,255,255,0.04);
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-  max-height: 230px;
-
-  /* keeps the media area consistent across both cards */
+  width: 100%;
+  max-width: 100%;
   aspect-ratio: 16 / 9;
-  max-width: 450px; 
-  max-height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
+
+.media-frame img,
+.media-frame iframe,
+.media-frame embed,
+.frame iframe,
+.frameCV iframe,
+.frame img,
+.frameCV img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+
 
 .portfolio-note {
   font-style: italic;
@@ -568,8 +608,14 @@ textarea{ resize: vertical; min-height: 120px; }
 
 .footer-item {
   white-space: normal;
+  word-break: break-word;
 }
-
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 
 #contact input,
@@ -601,6 +647,30 @@ textarea{ resize: vertical; min-height: 120px; }
     align-items:flex-start;
     gap:80px;
 }
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contact-form,
+  .contact-info,
+  .contact-wrapper > div {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+
 
 .contact-form{
     flex:2;
