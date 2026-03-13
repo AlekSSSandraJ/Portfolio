@@ -475,28 +475,41 @@ textarea{ resize: vertical; min-height: 120px; }
 .about-wrapper {
   display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
-/* Image styling */
 .about-image img {
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
   border-radius: 16px;
   object-fit: cover;
-
-
+  display: block;
 }
 
-/* text width control */
 .about-text {
   max-width: 700px;
+  width: 100%;
 }
 
 /* responsive layout */
-@media (max-width: 200px) {
+@media (max-width: 768px) {
   .about-wrapper {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    text-align: left;
+    gap: 1.5rem;
+  }
+
+  .about-image,
+  .about-text {
+    width: 100%;
+  }
+
+  .about-image img {
+    margin: 0 auto;
   }
 }
 
