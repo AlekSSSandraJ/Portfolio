@@ -782,3 +782,33 @@ textarea{ resize: vertical; min-height: 120px; }
 .project-list li::marker{
   color: rgba(255,255,255,0.75);
 }
+
+
+
+.project-blockchain-mobile-card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .project-blockchain-mobile-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: 0 16px 50px rgba(0,0,0,0.30);
+  }
+
+  .project-blockchain-mobile-card .project-blockchain,
+  .project-blockchain-mobile-card .project-list {
+    margin: 0;
+  }
+
+  .project-blockchain-mobile-card .project-list {
+    margin-top: 12px;
+    padding-left: 20px;
+  }
+}
