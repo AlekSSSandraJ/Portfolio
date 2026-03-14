@@ -354,11 +354,12 @@ img, iframe, embed, object {
 .tags{
   display:flex;
   flex-wrap:wrap;
+  margin-bottom: 10px;
   gap: 8px;
 }
 .tag{
   font-size: 12px;
-  padding: 6px 10px;
+  padding: 6px 14px;
   border-radius: 999px;
   background: rgba(127,180,255,0.14);
   border: 1px solid rgba(127,180,255,0.22);
