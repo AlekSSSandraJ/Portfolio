@@ -159,6 +159,7 @@ img, iframe, embed, object {
   0%{ background-position: center; }
   100%{ background-position: center 60%; }
 }
+
 .hero-content{
   position:relative;
   padding: 80px 0 40px;
@@ -196,20 +197,52 @@ img, iframe, embed, object {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .hero-content {
-    grid-template-columns: 1fr;
+    padding: 42px 0 28px;
     gap: 20px;
-    padding: 48px 0 32px;
+  }
+
+  .pill {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.5;
+    padding: 10px 14px;
   }
 
   .hero h1 {
-    font-size: clamp(34px, 9vw, 44px);
+    font-size: clamp(34px, 10vw, 46px);
     line-height: 1.08;
+    margin: 14px 0 12px;
   }
 
   .sub {
     font-size: 15px;
     line-height: 1.7;
+  }
+
+  .cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .btn {
+    max-width: 100%;
+  }
+
+  .profile-card {
+    padding: 16px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 }
 
