@@ -813,3 +813,35 @@ textarea{ resize: vertical; min-height: 120px; }
     padding-left: 20px;
   }
 }
+
+
+
+
+.report-download-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .report-preview {
+    display: none;
+  }
+
+  .report-card{
+    display: none;
+  }
+
+  .report-download-mobile {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+    margin-bottom: 12px;
+  }
+
+  .report-download-mobile .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+  }
+}
