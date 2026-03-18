@@ -845,3 +845,31 @@ textarea{ resize: vertical; min-height: 120px; }
     max-width: 320px;
   }
 }
+
+
+.cv-mobile-preview {
+  display: none;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.cv-mobile-img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 768px) {
+  .cv-wrapper {
+    display: none;
+  }
+
+  .cv-mobile-preview {
+    display: block;
+  }
+}
