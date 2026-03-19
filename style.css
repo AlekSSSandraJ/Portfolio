@@ -654,6 +654,8 @@ textarea{ resize: vertical; min-height: 120px; }
     margin: 0 auto;
     max-width: 100%;
   }
+
+  
 }
 
 
@@ -871,5 +873,12 @@ textarea{ resize: vertical; min-height: 120px; }
 
   .cv-mobile-preview {
     display: block;
+  }
+}
+
+
+@media (max-width: 950px) {
+  #contact .about-image {
+    display: none;
   }
 }
